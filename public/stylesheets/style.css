@@ -3,3 +3,9 @@ h1{
     margin-top: 70px;
 }
 
+nav {
+    height: 2cm;
+    background-image: url( ../assets/logo.png );
+    background-repeat: repeat-y;
+    background-position-x: center;
+}

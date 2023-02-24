@@ -1,20 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import Home from "components/Home";
+import Login from 'components/Login';
+import PublishPost from 'components/PublishPost';
+import CreateAcc from 'components/CreateAcc';
+import { Route, Link, Routes, HashRouter as Router} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <header>
-          Munch: A Restaurant Boosting app
-        </header>
-        <p className="body_p">
-          Created by Jason and Brandon
-        </p>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+      <Route path="/" element={ <Home /> }/>
+      <Route path="/login" element={ <Login /> }/>
+      <Route path="/create" element={ <CreateAcc /> }/>
+      <Route path="/publish" element={ <PublishPost /> }/>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
