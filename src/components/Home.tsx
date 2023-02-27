@@ -1,10 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { Route, Link, Routes, BrowserRouter as Router} from "react-router-dom";
-import Login from "../components/Login";
-import CreateAcc from "../components/CreateAcc";
-import PublishPost from "../components/PublishPost";
 
 const Home = () => {
 
