@@ -1,15 +1,52 @@
+import { ACCOUNT_ALREADY_REGISTERED_STATUS, HOME_ROUTE, SUCCESS, TRY_AGAIN_LATER_MSG } from "constant/CommonConstants";
 import React, {useState } from "react";
 import Navbar from "./Navbar";
+import { StatusModal } from "./StatusModal";
+import { useNavigate } from "react-router-dom";
+import { loginAccount } from "util/apiUtil";
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showStatus, setShowStatus] = useState(false);
+    const [statusModalTitle, setStatusModalTItle] = useState("");
+    const [statusModalDescription, setStatusModalDescription] = useState("");
+    const navigate = useNavigate();
 
+    const handleOnSubmit = async () => {
+        const params = {
+          email: email,
+          password: password
+        }
+        const resp = await loginAccount(params);
+        
+        if (SUCCESS === resp.status) {
+          navigate(HOME_ROUTE);
+        } else {
+          setStatusModalTItle("Error Logging in");
+          if (ACCOUNT_ALREADY_REGISTERED_STATUS === resp.status) {
+            setStatusModalDescription(resp.status);
+          } else {
+            setStatusModalDescription(TRY_AGAIN_LATER_MSG);
+          }
+          setShowStatus(true);
+        }
+      }
     return (
         <div>
-            <Navbar />
+            <Navbar />            
             <h2 className="text-center">Log into Your Account!</h2>
-            <form>
+            {
+              showStatus ?
+              <StatusModal
+                title={statusModalTitle}
+                description={statusModalDescription}
+                open={showStatus}
+                handleClose={() => setShowStatus(false)}
+              /> :
+              ""
+            }            
+            <form onSubmit={handleOnSubmit}>
                 <div className="form align-items-center">
                     <div className="form-group col-md-4">
                         <label htmlFor = "exampleInputEmail1">Email address *</label>
