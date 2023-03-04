@@ -24,11 +24,7 @@ const Login = () => {
           navigate(HOME_ROUTE);
         } else {
           setStatusModalTItle("Error Logging in");
-          if (ACCOUNT_ALREADY_REGISTERED_STATUS === resp.status) {
-            setStatusModalDescription(resp.status);
-          } else {
-            setStatusModalDescription(TRY_AGAIN_LATER_MSG);
-          }
+          setStatusModalDescription(TRY_AGAIN_LATER_MSG);
           setShowStatus(true);
         }
       }
@@ -57,7 +53,7 @@ const Login = () => {
                         <input type="password" className="form-control " value={password} onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Enter Password"/>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary">Create Account</button>
+                <button type="submit" className="btn btn-primary">Login</button>
             </form>
         </div>
     );
