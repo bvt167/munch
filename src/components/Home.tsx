@@ -2,7 +2,11 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Home = () => {
+const Home = (props) => {
+  const accountInfo = props.accountInfo;
+  const isLoggedIn = props.isLoggedIn;
+  console.log(accountInfo);
+  console.log(isLoggedIn);
 
     return (
         <div className="container-fluid">

@@ -5,12 +5,14 @@ import { StatusModal } from "./StatusModal";
 import { useNavigate } from "react-router-dom";
 import { loginAccount } from "util/apiUtil";
 
-const Login = () => {
+const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showStatus, setShowStatus] = useState(false);
     const [statusModalTitle, setStatusModalTItle] = useState("");
     const [statusModalDescription, setStatusModalDescription] = useState("");
+    const setIsLoggedIn = props.setIsLoggedIn;
+    const setAccountInfo = props.setAccountInfo;
     const navigate = useNavigate();
 
     const handleOnSubmit = async () => {
@@ -19,8 +21,10 @@ const Login = () => {
           password: password
         }
         const resp = await loginAccount(params);
-        
-        if (SUCCESS === resp.status) {
+
+        if (!resp.status) {
+          setIsLoggedIn(true);
+          setAccountInfo(resp);
           navigate(HOME_ROUTE);
         } else {
           setStatusModalTItle("Error Logging in");
@@ -28,9 +32,10 @@ const Login = () => {
           setShowStatus(true);
         }
       }
+
     return (
         <div>
-            <Navbar />            
+            <Navbar />
             <h2 className="text-center">Log into Your Account!</h2>
             {
               showStatus ?
@@ -41,7 +46,7 @@ const Login = () => {
                 handleClose={() => setShowStatus(false)}
               /> :
               ""
-            }            
+            }
             <form onSubmit={handleOnSubmit}>
                 <div className="form align-items-center">
                     <div className="form-group col-md-4">

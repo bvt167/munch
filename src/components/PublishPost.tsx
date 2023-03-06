@@ -2,9 +2,10 @@ import Navbar from "./Navbar";
 import React, { useState } from "react";
 
 
-const PublishPost = () => {
+const PublishPost = (props) => {
     const [caption, setCaption] = useState('');
-    const [image, setImage] = useState(''); 
+    const [image, setImage] = useState('');
+    const isLoggedIn = props.isLoggedIn;
 
     const handleOnSubmit = async () => {
         const params = {
