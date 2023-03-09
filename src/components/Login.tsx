@@ -1,4 +1,4 @@
-import { ACCOUNT_ALREADY_REGISTERED_STATUS, HOME_ROUTE, SUCCESS, TRY_AGAIN_LATER_MSG } from "constant/CommonConstants";
+import { HOME_ROUTE, TRY_AGAIN_LATER_MSG } from "constant/CommonConstants";
 import React, {useState } from "react";
 import Navbar from "./Navbar";
 import { StatusModal } from "./StatusModal";
