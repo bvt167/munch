@@ -21,6 +21,10 @@ export const registerAccount = async (params: any) => {
   return await callMunchEndpoint(params, REGISTER_ENDPOINT);
 }
 
+export const publishPost = async (params: any) => {
+  return await callMunchEndpoint(params, CREATE_POST_ENDPOINT);
+}
+
 export const checkStatus = async (resp: any) => {
   console.log(resp);
   if (resp.ok) {
