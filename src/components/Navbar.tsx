@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
-
+    const navigate = useNavigate();
 
     return (
         <div>
             <div className = "container-fluid">
                 <div className="page-header">
                     <div className= "text-center">
-                        <img src="../../assets/munchLogo.png" alt="logo"></img>
+                        <button><img src="../../assets/munchLogo.png" alt="logo" onClick={() => navigate("/")}></img></button>
                     </div>
                     <h6 className="text-center"> A Restaurant Boosting App</h6>
                     <div className="container">
