@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contact us at: Jasonj1@uw.edu ot bvt@uw.edu
 
+## Links
+
+Hosted web app: https://victorious-dune-0e5eed11e.2.azurestaticapps.net/
+Hosted backend: https://munch.azurewebsites.net/
+Backend repository: https://github.com/bvt167/munch-back-end
+
 ## Available Scripts
 
 In the project directory, you can run:
