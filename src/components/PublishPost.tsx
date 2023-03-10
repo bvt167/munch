@@ -18,9 +18,9 @@ const PublishPost = (props) => {
           email: "jasonj1@uw.edu",
           password: "asdf"
         }
-        const resp = await publishPost(params)
+        await publishPost(params)
         if(!isLoggedIn) {
-            navigate("/login"); 
+            navigate("/login");
         } else {
             setIsLoggedIn(true);
         }

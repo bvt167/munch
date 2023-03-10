@@ -1,10 +1,10 @@
-import './App.css';
-import React, { useEffect, useState } from 'react';
+import CreateAcc from 'components/CreateAcc';
 import Home from "components/Home";
 import Login from 'components/Login';
 import PublishPost from 'components/PublishPost';
-import CreateAcc from 'components/CreateAcc';
-import { Route, Link, Routes, HashRouter as Router} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
+import './App.css';
 
 
 function App() {

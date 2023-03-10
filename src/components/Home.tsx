@@ -18,12 +18,12 @@ const Home = (props) => {
                         </a>
                     </div>
                     <div className="col-xs-6 col-md-3">
-                        <a href="#" className="thumbnail">
+                        <a href="/" className="thumbnail">
                         <img src="../../assets/temp2.png" alt="temp pic"></img>
                         </a>
                     </div>
                     <div className="col-xs-6 col-md-3">
-                        <a href="#" className="thumbnail">
+                        <a href="/" className="thumbnail">
                         <img src="../../assets/temp3.png" alt="temp pic"></img>
                         </a>
                     </div>
