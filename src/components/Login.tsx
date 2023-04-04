@@ -1,9 +1,31 @@
 import { HOME_ROUTE, TRY_AGAIN_LATER_MSG } from "constant/CommonConstants";
 import React, {useState } from "react";
 import Navbar from "./Navbar";
+import styled from "styled-components"
 import { StatusModal } from "./StatusModal";
 import { useNavigate } from "react-router-dom";
 import { loginAccount } from "util/apiUtil";
+import { Link } from "react-router-dom";
+
+
+const CircledContainer = styled.div`
+  border-radius: 25px;
+  background: #F9E1E1;
+  width: 400px;
+  height: 450px;  
+  padding: 50px 0;
+  border: 3px solid gray;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+`
+const Text1 = styled.div`
+  font-size: 22px;
+  color: gray;
+`
+const Text2 = styled.div`
+  font-size: 22px;
+`
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -16,7 +38,7 @@ const Login = (props) => {
     const navigate = useNavigate();
 
     const handleOnSubmit = async () => {
-        const params = {
+      const params = {
           email: email,
           password: password
         }
@@ -48,6 +70,7 @@ const Login = (props) => {
               ""
             }
             <form onSubmit={handleOnSubmit}>
+              <CircledContainer>
                 <div className="form align-items-center">
                     <div className="form-group col-md-4">
                         <label htmlFor = "exampleInputEmail1">Email address *</label>
@@ -57,8 +80,11 @@ const Login = (props) => {
                         <label htmlFor = "exampleInputPassword1">Password *</label>
                         <input type="password" className="form-control " value={password} onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Enter Password"/>
                     </div>
+                    <Text1> Don't have an account? </Text1>
+                    <Text2><Link to="/create" style={{ color: "black"}}> Tap here to create one! </Link></Text2>
                 </div>
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-primary" style = {{color: "white"}}>Login</button>
+              </CircledContainer>
             </form>
         </div>
     );
