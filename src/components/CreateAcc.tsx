@@ -4,6 +4,19 @@ import { useNavigate } from "react-router-dom";
 import { registerAccount } from "util/apiUtil";
 import Navbar from "./Navbar";
 import { StatusModal } from "./StatusModal";
+import styled from "styled-components";
+
+const CircledContainer = styled.div`
+  border-radius: 25px;
+  background: #F9E1E1;
+  width: 500px;
+  height: 700px;  
+  padding: 50px 0;
+  border: 3px solid gray;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+`
 
 
 const CreateAcc = () => {
@@ -59,6 +72,7 @@ const CreateAcc = () => {
               ""
             }
             <form onSubmit={handleOnSubmit}>
+              <CircledContainer>
                 <div className="form-row align-items-center">
                     <div className="form-group col-md-4">
                         <label htmlFor = "inputEmail">Email address *</label>
@@ -94,6 +108,7 @@ const CreateAcc = () => {
                     </div>
                 </div>
                 <button type="submit" className="btn btn-primary">Create Account</button>
+                </CircledContainer>
             </form>
         </div>
     );

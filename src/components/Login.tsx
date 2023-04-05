@@ -22,10 +22,16 @@ const CircledContainer = styled.div`
 const Text1 = styled.div`
   font-size: 22px;
   color: gray;
+  margin-left: auto;
+  margin-right: auto;
 `
 const Text2 = styled.div`
   font-size: 22px;
+  margin-left: auto;
+  margin-right: auto;
 `
+
+
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -80,9 +86,9 @@ const Login = (props) => {
                         <label htmlFor = "exampleInputPassword1">Password *</label>
                         <input type="password" className="form-control " value={password} onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Enter Password"/>
                     </div>
-                    <Text1> Don't have an account? </Text1>
-                    <Text2><Link to="/create" style={{ color: "black"}}> Tap here to create one! </Link></Text2>
                 </div>
+                <Text1> Don't have an account? </Text1>
+                <Text2><Link to="/create" style={{ color: "black"}}> Tap here to create one! </Link></Text2>
                 <button type="submit" className="btn btn-primary" style = {{color: "white"}}>Login</button>
               </CircledContainer>
             </form>
