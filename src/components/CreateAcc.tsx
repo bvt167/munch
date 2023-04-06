@@ -9,7 +9,7 @@ import styled from "styled-components";
 const CircledContainer = styled.div`
   border-radius: 25px;
   background: #F9E1E1;
-  width: 500px;
+  width: 350px;
   height: 700px;  
   padding: 50px 0;
   border: 3px solid gray;
@@ -17,6 +17,7 @@ const CircledContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
+
 
 
 const CreateAcc = () => {
@@ -107,7 +108,7 @@ const CreateAcc = () => {
                         <input type="jobtitle" className="form-control "  onChange={(e) => setJobTitle(e.target.value)} value={jobTitle} id="inputJobTitle" aria-describedby="jobtitleHelp" placeholder="What is your Job Title"/>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary">Create Account</button>
+                  <button type="submit" className="btn btn-primary">Create Account</button>
                 </CircledContainer>
             </form>
         </div>
