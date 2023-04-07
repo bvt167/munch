@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={ <Home accountInfo={accountInfo} isLoggedIn={isLoggedIn} /> }/>
+        <Route path="/" element={ <SignIn /> }/>
         <Route path="/login" element={
           <Login
             setIsLoggedIn={setIsLoggedIn}
