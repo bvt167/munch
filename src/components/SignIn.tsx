@@ -50,24 +50,3 @@ const SignIn = () => {
 }
 
 export default SignIn;
-
-// {
-//   switch (display):
-//     case "createAccount": <CreateAcc />
-//     case "logIn": <Login />
-//     default:
-//     <div>
-//       <div>
-//         <div>
-//           <h1 className='ps-4'>Welcome to</h1>
-//           <img className='m-0 p-0' src='../../assets/munchLogo.png' alt='Munch Logo'></img>
-//         </div>
-//       </div>
-//       <div className='w-90 d-flex flex-column'>
-//         <ThemeProvider theme={theme}>
-//           <Button className='mt-5' variant="contained" size="large" color="primary">Create an Account</Button>
-//           <Button className='mt-3' variant="outlined" size="large" color="primary">Sign In</Button>
-//         </ThemeProvider>
-//       </div>
-//     </div>
-// }
