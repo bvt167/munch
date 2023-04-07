@@ -1,39 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 
 const Navbar = () => {
 
     return (
-        <div style={{ paddingLeft: '5%', paddingRight: '3%'}}>
-            <div className = "container-fluid">
-                <div className="page-header">
-                    <div className="container">
-                        <nav className="navbar">
-                        <Link to ="/">
-                            <img src="../../assets/munchLogo.png" alt="logo" ></img>
-                        </Link>
-                            <ul className="nav nav-pills">
-                                    <li>
-                                        <Link to="/"> Home </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/login"> Login </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/create"> Create Account </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/publish"> Publish Post </Link>
-                                    </li>
-                            </ul>
-                        </nav>
-                    </div>
+        <div className="flex">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <Link to ="/">
+                    <img src="../../assets/munchLogo.png" alt="logo" width={"200px"} ></img>
+                </Link>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item active">
+                            <Link to="/" className="nav-link"> Home <span className="sr-only"></span></Link>                    
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/login" className="nav-link"> Login </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/create" className="nav-link"> Create Account </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/publish" className="nav-link"> Publish Post </Link>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </nav>
         </div>
-    )
-}
+    );
+};
 
 
 

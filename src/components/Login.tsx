@@ -11,13 +11,13 @@ import { Link } from "react-router-dom";
 const CircledContainer = styled.div`
   border-radius: 25px;
   background: #F9E1E1;
-  width: 400px;
-  height: 450px;  
+  width: 325px;
+  height: 425px;  
   padding: 50px 0;
   border: 3px solid gray;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+
 `
 const Text1 = styled.div`
   font-size: 22px;
@@ -30,8 +30,6 @@ const Text2 = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
-
-
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -64,7 +62,7 @@ const Login = (props) => {
     return (
         <div>
             <Navbar />
-            <h2 className="text-center">Log into Your Account!</h2>
+            <h2 className="text-center" style={{fontSize: "22px"}}>Log into Your Account!</h2>
             {
               showStatus ?
               <StatusModal
@@ -89,7 +87,7 @@ const Login = (props) => {
                 </div>
                 <Text1> Don't have an account? </Text1>
                 <Text2><Link to="/create" style={{ color: "black"}}> Tap here to create one! </Link></Text2>
-                <button type="submit" className="btn btn-primary" style = {{color: "white"}}>Login</button>
+                <button type="submit" className="btn btn-primary" style = {{backgroundColor: "#F9F6EE", color: "gray", borderColor: "gray"}}>Login</button>
               </CircledContainer>
             </form>
         </div>
