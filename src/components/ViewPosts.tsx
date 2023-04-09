@@ -25,7 +25,7 @@ const Button = styled.div`
     margin-bottom: 30px;
 `
 
-const PublishPost = (props) => {
+const ViewPost = (props) => {
     const [caption, setCaption] = useState('');
     const [image, setImage] = useState('');
     const navigate = useNavigate();
@@ -79,4 +79,4 @@ const PublishPost = (props) => {
     );
 };
 
-export default PublishPost;
+export default ViewPost;
