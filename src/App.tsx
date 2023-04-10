@@ -27,6 +27,7 @@ function App() {
         <Route path="/create" element={ <CreateAcc /> }/>
         <Route path="/publish" element={ <PublishPost isLoggedIn={isLoggedIn} /> }/>
         <Route path="/signin" element={ <SignIn /> } />
+        <Route path="/home" element={ <Home /> } />
       </Routes>
     </Router>
   )
