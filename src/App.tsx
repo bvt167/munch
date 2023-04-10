@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import './App.css';
 import SignIn from 'components/SignIn';
+import ViewPost from 'components/ViewPosts';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
         <Route path="/create" element={ <CreateAcc /> }/>
         <Route path="/publish" element={ <PublishPost isLoggedIn={isLoggedIn} /> }/>
         <Route path="/signin" element={ <SignIn /> } />
+        <Route path="/home" element={ <Home /> } />
+        <Route path="/viewpost" element={ <ViewPost /> } />
         <Route path="/home" element={ <Home /> } />
       </Routes>
     </Router>

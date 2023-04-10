@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Headers from "./Header";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -20,37 +21,44 @@ const Home = (props) => {
   console.log(isLoggedIn);
 
     return (
-        <div className="container-fluid">
-            <Navbar />
-            <Link to="/publish">
-                <Cards>
-                <div className="card" style={{borderRadius: "10px"}}>
-                    <img src="../../assets/image1.png" alt="Avatar" style={{borderRadius: "10px"}}></img>
-                    <div className="container">
-                        <h4 className="text-center"> Make new post </h4>
+        <> 
+            <Headers />
+            <div className="container-fluid">
+                <div className="text-center">
+                    <img src="../../assets/munchLogo.png" alt="logo" width={"200px"} style={{marginTop: "100px", marginBottom: "10px"}} ></img>
+                </div>
+                <Link to="/publish">
+                    <Cards>
+                    <div className="card" style={{borderRadius: "10px"}}>
+                        <img src="../../assets/image1.png" alt="Avatar" style={{borderRadius: "10px"}}></img>
+                        <div className="container">
+                            <h4 className="text-center"> Make new post </h4>
+                        </div>
                     </div>
-                </div>
-                </Cards>
-            </Link>
-            <Link to="/viewpost">
-                <Cards>
-                <div className="card">
-                    <img src="../../assets/image2.png" alt="Avatar"></img>
-                    <div className="container">
-                        <h4 className="text-center"> View all posts </h4>
+                    </Cards>
+                </Link>
+                <Link to="/viewpost">
+                    <Cards>
+                    <div className="card" style={{borderRadius: "10px"}}>
+                        <img src="../../assets/image2.png" alt="Avatar"></img>
+                        <div className="container">
+                            <h4 className="text-center"> View all posts </h4>
+                        </div>
                     </div>
-                </div>
-                </Cards>
-            </Link>
-            <Cards>
-            <div className="card">
-                <img src="../../assets/image3.png" alt="Avatar"></img>
-                <div className="container">
-                    <h4 className="text-center"> Tips for posting </h4>
-                </div>
+                    </Cards>
+                </Link>
+                <Link to="/tips">
+                    <Cards>
+                    <div className="card" style={{borderRadius: "10px"}}>
+                        <img src="../../assets/image3.png" alt="Avatar"></img>
+                        <div className="container">
+                            <h4 className="text-center"> Tips for posting </h4>
+                        </div>
+                    </div>
+                    </Cards>
+                </Link>
             </div>
-            </Cards>
-        </div>
+        </>
     )
 }
 

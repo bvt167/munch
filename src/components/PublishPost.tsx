@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Headers from "./Header";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { publishPost } from "util/apiUtil";
@@ -49,7 +50,7 @@ const PublishPost = (props) => {
 
     return (
         <div>
-            <Navbar />
+            <Headers />
             <div className="text-center">
                 <Header>
                     <h3> Add images from </h3>
