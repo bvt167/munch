@@ -6,18 +6,18 @@ import { StatusModal } from "./StatusModal";
 import { useNavigate } from "react-router-dom";
 import { loginAccount } from "util/apiUtil";
 import { Link } from "react-router-dom";
+import { ArrowBack, ArrowForward, ArrowForwardOutlined } from "@mui/icons-material";
+import { Button, IconButton } from "@mui/material";
 
 
 const CircledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 25px;
-  background: #F9E1E1;
-  width: 325px;
-  height: 425px;  
-  padding: 50px 0;
+  width: 100%;
   border: 3px solid gray;
-  text-align: center;
-  margin: 0 auto;
-
+  margin-right: 1rem;
 `
 const Text1 = styled.div`
   font-size: 22px;
@@ -60,37 +60,41 @@ const Login = (props) => {
       }
 
     return (
-        <div>
-            <Navbar />
-            <h2 className="text-center" style={{fontSize: "22px"}}>Log into Your Account!</h2>
-            {
-              showStatus ?
-              <StatusModal
-                title={statusModalTitle}
-                description={statusModalDescription}
-                open={showStatus}
-                handleClose={() => setShowStatus(false)}
-              /> :
-              ""
-            }
-            <form onSubmit={handleOnSubmit}>
-              <CircledContainer>
-                <div className="form align-items-center">
-                    <div className="form-group col-md-4">
-                        <label htmlFor = "exampleInputEmail1">Email address *</label>
-                        <input type="email" className="form-control " onChange={(e) => setEmail(e.target.value)} value={email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                    </div>
-                    <div className="form-group col-md-4">
-                        <label htmlFor = "exampleInputPassword1">Password *</label>
-                        <input type="password" className="form-control " value={password} onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Enter Password"/>
-                    </div>
+      <div>
+        <CircledContainer className="p-3">
+          <IconButton className="bg-black p-1 align-self-start" aria-label="back" onClick={() => props.setDisplay("")}>
+            <ArrowBack htmlColor="#FFFFFF" />
+          </IconButton>
+          <h2 className="text-center" style={{fontSize: "22px"}}>Sign In</h2>
+          {
+            showStatus ?
+            <StatusModal
+              title={statusModalTitle}
+              description={statusModalDescription}
+              open={showStatus}
+              handleClose={() => setShowStatus(false)}
+            /> :
+            ""
+          }
+          <form onSubmit={handleOnSubmit} className="d-flex flex-column">
+            <div className="form align-items-center">
+                <div className="form-group col-md-4">
+                    <label htmlFor = "exampleInputEmail1">Email *</label>
+                    <input type="email" className="form-control " onChange={(e) => setEmail(e.target.value)} value={email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
                 </div>
-                <Text1> Don't have an account? </Text1>
-                <Text2><Link to="/create" style={{ color: "black"}}> Tap here to create one! </Link></Text2>
-                <button type="submit" className="btn btn-primary" style = {{backgroundColor: "#F9F6EE", color: "gray", borderColor: "gray"}}>Login</button>
-              </CircledContainer>
-            </form>
-        </div>
+                <div className="form-group col-md-4">
+                    <label htmlFor = "exampleInputPassword1">Password *</label>
+                    <input type="password" className="form-control " value={password} onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Enter Password"/>
+                </div>
+            </div>
+            <Text1>Don't have an account?</Text1>
+            <Button onClick={() => props.setDisplay("createAccount")}><Text2 onClick={() => props.setDisplay("createAccount")}>Tap here to create one!</Text2></Button>
+            <IconButton className="p-1 align-self-end btn btn-outline-dark" aria-label="submit" onClick={() => navigate("/home")}>
+              <ArrowForwardOutlined htmlColor="#000000" />
+            </IconButton>
+          </form>
+        </CircledContainer>
+      </div>
     );
 };
 

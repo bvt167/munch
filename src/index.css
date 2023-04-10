@@ -20,10 +20,28 @@ img {
   background-color: pink;
 }
 
+label {
+  text-align: start;
+  width: 100%;
+}
+
+input {
+  background-color: grey;
+}
+
 .rcorners1 {
   border-radius: 25px;
   background: #73AD21;
   padding: 20px;
   width: 200px;
   height: 150px; 
+}
+
+.form-group {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+.MuiButton-text {
+  text-transform: unset !important;
 }
