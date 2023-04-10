@@ -25,7 +25,7 @@ const Home = (props) => {
             <Headers />
             <div className="container-fluid">
                 <div className="text-center">
-                    <img src="../../assets/munchLogo.png" alt="logo" width={"200px"} style={{marginTop: "100px", marginBottom: "10px"}} ></img>
+                    <img src="../../assets/munchLogo.png" alt="logo" width={"300px"} style={{marginTop: "100px", marginBottom: "10px"}} ></img>
                 </div>
                 <Link to="/publish">
                     <Cards>

@@ -1,7 +1,5 @@
 import Headers from "./Header";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { publishPost } from "util/apiUtil";
 import styled from "styled-components";
 
 const Header = styled.div`
@@ -26,56 +24,49 @@ const Button = styled.div`
 `
 
 const ViewPost = (props) => {
-    const [caption, setCaption] = useState('');
-    const [image, setImage] = useState('');
-    const navigate = useNavigate();
-    const isLoggedIn = props.isLoggedIn;
-    const setIsLoggedIn = props.setIsLoggedIn;
-
-    const handleOnSubmit = async () => {
-        const params = {
-          media: image,
-          caption: caption,
-          email: "jasonj1@uw.edu",
-          password: "asdf"
-        }
-        await publishPost(params)
-        if(!isLoggedIn) {
-            navigate("/login");
-        } else {
-            setIsLoggedIn(true);
-        }
-    }
 
     return (
-        <>
-            <Headers />
-            <div className="text-center">
-                <Header>
-                    <h3> Add images from </h3>
-                    <h3> your photo library </h3>
-                </Header>
+        <div className="container">
+
+            <div className="profile">
+
+                <div className="profile-image">
+
+                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt=""></img>
+
+                </div>
+
+                <div className="profile-user-settings">
+
+                    <h1 className="profile-user-name">janedoe_</h1>
+
+                    <button className="btn profile-edit-btn">Edit Profile</button>
+
+                    <button className="btn profile-settings-btn" aria-label="profile settings"><i className="fas fa-cog" aria-hidden="true"></i></button>
+
+                </div>
+
+                <div className="profile-stats">
+
+                    <ul>
+                        <li><span className="profile-stat-count">164</span> posts</li>
+                        <li><span className="profile-stat-count">188</span> followers</li>
+                        <li><span className="profile-stat-count">206</span> following</li>
+                    </ul>
+
+                </div>
+
+                <div className="profile-bio">
+
+                    <p><span className="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+
+                </div>
+
             </div>
-            <CircledContainer>
-                <form onSubmit={handleOnSubmit}>
-                    <div className="form-group col-md-4 col-md-offset-2 ">
-                        <label htmlFor="formFileMultiple" className="form-label">Upload Image(s)</label>
-                        <input className="form-control" onChange={(e) => setImage(e.target.value)} value={image} type="file" id="formFileMultiple" multiple accept="image/png, image/gif, image/jpeg"/>
-                    </div>
-                    <Button>
-                        <div className="form-group col-md-4">
-                            <label htmlFor = "inputCaption">Caption *</label>
-                            <input type="caption" className="form-control " onChange={(e) => setCaption(e.target.value)} value={caption} id="inputCaption" aria-describedby="captionHelp" placeholder="Enter your caption"/>
-                        </div>
-                    </Button>
-                    <div className="text-center">
-                        <Button>
-                            <button type="submit" className="btn btn-primary">Publish Post</button>
-                        </Button>
-                    </div>
-                </form>
-            </CircledContainer>
-        </>
+
+        </div>
+
+
     );
 };
 

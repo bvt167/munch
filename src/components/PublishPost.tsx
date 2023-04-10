@@ -51,11 +51,11 @@ const PublishPost = (props) => {
     return (
         <div>
             <Headers />
-            <div className="text-center">
-                <Header>
-                    <h3> Add images from </h3>
-                    <h3> your photo library </h3>
-                </Header>
+            <div className="container-fluid">
+                <div className="text-center">
+                        <h3 style={{marginTop: "0px"}}> Add images from </h3>
+                        <h3> your photo library </h3>
+                </div>
             </div>
             <CircledContainer>
                 <form onSubmit={handleOnSubmit}>
