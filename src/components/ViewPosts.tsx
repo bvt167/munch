@@ -12,9 +12,8 @@ const Body = styled.div`
 
 const Image = styled.div`
     float: left;
-    width: calc(33.333% - 1rem);
+    width: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-right: 35px;
 `
@@ -43,25 +42,21 @@ const ViewPost = (props) => {
         <div className="container">
 
         <Body>
-            <div className="profile">
+            <div className="profile" style={{padding: "1rem 0"}}>
                 <Image>
-                    <div className="profile-image">
-
-                        <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{borderRadius: "50%"}}></img>
-
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{borderRadius: "50%", width: "95px", height: "95px"}}></img>
                 </Image>
                 <div className="profile-user-settings" style={{float: "left", width: "calc(66.666% - 2rem)", marginTop: "25px"}}>
 
                     <h1 className="profile-user-name" style={{display: "inline-block", fontSize: "25px", fontWeight: "300"}}>MunchRestaurants</h1>
 
-                    <Button><button className="btn profile-edit-btn">Edit Profile</button></Button>
+                    <button className="btn profile-edit-btn" style={{fontSize: "1rem", lineHeight: "1.8", border: "0.1rem solid #dbdbdb", borderRadius: "0.3rem", padding: "0 2.4rem", marginLeft: "2rem"}}>Edit Profile</button>
 
                     <Button><button className="btn profile-settings-btn" aria-label="profile settings"><i className="fas fa-cog" aria-hidden="true"></i></button></Button>
 
                 </div>
 
-                <div className="profile-stats" style={{float: "left", width: "calc(66.666% - 2rem)"}}>
+                <div className="profile-stats" style={{float: "left", width: "calc(66.666% - 2rem)", marginTop: ""}}>
 
                     <ul>
                         <li><span className="profile-stat-count">164</span> posts</li>
