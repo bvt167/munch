@@ -7,6 +7,7 @@ import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import './App.css';
 import SignIn from 'components/SignIn';
 import ViewPost from 'components/ViewPosts';
+import ConfirmPost from 'components/ConfirmPost';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/home" element={ <Home /> } />
         <Route path="/viewpost" element={ <ViewPost /> } />
         <Route path="/home" element={ <Home /> } />
+        <Route path="/confirm" element={ <ConfirmPost />} />
       </Routes>
     </Router>
   )

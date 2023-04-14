@@ -47,7 +47,7 @@ const Home = (props) => {
                     </div>
                     </Cards>
                 </Link>
-                <Link to="/tips">
+                <Link to="/viewpost">
                     <Cards>
                     <div className="card" style={{borderRadius: "10px"}}>
                         <img src="../../assets/image3.png" alt="Avatar"></img>

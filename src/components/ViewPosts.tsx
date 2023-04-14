@@ -1,5 +1,4 @@
-import Headers from "./Header";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -28,19 +27,13 @@ const Button = styled.div`
     cursor: pointer;
 `
 
-const ProfileName = styled.div`
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 300;
-`
-
 
 
 const ViewPost = (props) => {
 
     return (
         <div className="container" style={{maxWidth: "93.5rem", margin: "0 auto", padding: "0 1rem"}}>
-
+            
         <Body>
             <div className="profile" style={{padding: "1rem 0"}}>
                 <Image>
