@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 
 
@@ -37,6 +38,7 @@ const ConfirmPost = () => {
               <p style={{fontSize: "20px", marginTop:"100px", marginBottom: "5px"}}>To view a post or post again,</p>
               <p style={{fontSize: "20px", fontWeight: "bold"}} onClick={() => navigate("/home")}>Tap here to go back home!</p>
             </div>
+            <Navbar />
         </div>
     );
 };

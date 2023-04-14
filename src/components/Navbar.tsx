@@ -1,37 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import HomeIcon from '@mui/icons-material/Home';
+import { IconButton } from "@mui/material";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useNavigate } from "react-router-dom";
 
 
-const Navbar = () => {
+
+const Navbar = (props) => {
+    const navigate = useNavigate();
 
     return (
-        <div className="flex">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link to ="/">
-                    <img src="../../assets/munchLogo.png" alt="logo" width={"200px"} ></img>
-                </Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <Link to="/" className="nav-link"> Home <span className="sr-only"></span></Link>                    
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/login" className="nav-link"> Login </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/create" className="nav-link"> Create Account </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/publish" className="nav-link"> Publish Post </Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <div className="container p-0" style={{background: "white"}}>
+            <IconButton className="homebutton" style={{background: "pink", position: "fixed", marginLeft: "115px", marginBottom: "25px", bottom: "0", width: "55px", height: "55px"}} aria-label="back" onClick={() => navigate("/home")}>
+                <HomeIcon htmlColor="#FFFFFF" style={{width: "35px", height: "35px"}} />
+            </IconButton>
+            <IconButton className="homebutton" style={{background: "pink", position: "fixed", marginLeft: "215px", marginBottom: "25px", bottom: "0", width: "55px", height: "55px"}} aria-label="back" onClick={() => navigate("/home")}>
+                <AccountCircleIcon htmlColor="#FFFFFF" style={{width: "35px", height: "35px"}}/>
+            </IconButton>
         </div>
     );
 };

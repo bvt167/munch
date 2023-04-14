@@ -85,6 +85,7 @@ const PublishPost = (props) => {
                     </div>
                 </form>
             </CircledContainer>
+            <Navbar />
         </div>
     );
 };

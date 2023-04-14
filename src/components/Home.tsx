@@ -27,37 +27,38 @@ const Home = (props) => {
                 <div className="text-center">
                     <img src="../../assets/munchLogo.png" alt="logo" width={"300px"} style={{marginTop: "100px", marginBottom: "10px"}} ></img>
                 </div>
-                <Link to="/publish">
+                <Link to="/publish" style={{textDecoration: "none"}}>
                     <Cards>
                     <div className="card" style={{borderRadius: "10px"}}>
-                        <img src="../../assets/image1.png" alt="Avatar" style={{borderRadius: "10px"}}></img>
+                        <img src="../../assets/image1.png" alt="Avatar"></img>
                         <div className="container">
-                            <h4 className="text-center"> Make new post </h4>
+                            <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> Make new post </p>
                         </div>
                     </div>
                     </Cards>
                 </Link>
-                <Link to="/viewpost">
+                <Link to="/viewpost" style={{textDecoration: "none"}}>
                     <Cards>
                     <div className="card" style={{borderRadius: "10px"}}>
                         <img src="../../assets/image2.png" alt="Avatar"></img>
                         <div className="container">
-                            <h4 className="text-center"> View all posts </h4>
+                            <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> View all posts </p>
                         </div>
                     </div>
                     </Cards>
                 </Link>
-                <Link to="/viewpost">
+                <Link to="/viewpost" style={{textDecoration: "none"}}>
                     <Cards>
                     <div className="card" style={{borderRadius: "10px"}}>
                         <img src="../../assets/image3.png" alt="Avatar"></img>
                         <div className="container">
-                            <h4 className="text-center"> Tips for posting </h4>
+                            <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> Tips for posting </p>
                         </div>
                     </div>
                     </Cards>
                 </Link>
             </div>
+            <Navbar />
         </>
     )
 }
