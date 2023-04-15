@@ -7,9 +7,12 @@ import styled from "styled-components";
 const Cards = styled.div`
     border-collapse: seperate;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     margin-top: 25px;
-    box-shadow: 0px 0px 5px 5px #D3D3D3
+    box-shadow: 0px 0px 5px 5px #D3D3D3;
+    width: 300px;
+    height: 150px;
+    margin-left: 30px
 `
 
 
@@ -49,7 +52,7 @@ const Home = (props) => {
                 </Link>
                 <Link to="/viewpost" style={{textDecoration: "none"}}>
                     <Cards>
-                    <div className="card" style={{borderRadius: "10px"}}>
+                    <div className="card" style={{borderRadius: "10px", marginBottom: "25px"}}>
                         <img src="../../assets/image3.png" alt="Avatar"></img>
                         <div className="container">
                             <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> Tips for posting </p>

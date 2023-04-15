@@ -5,6 +5,7 @@ import { publishPost } from "util/apiUtil";
 import styled from "styled-components";
 import { ArrowBack } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
+import Headers from "./Header";
 
 const Header = styled.div`
     margin-top: 50px;
@@ -50,11 +51,7 @@ const PublishPost = (props) => {
 
     return (
         <div>
-            <div className="container-fluid p-0"> 
-                <div className="p-0" style={{ width: "390px", height: "95px", background: "linear-gradient(210deg, #FFDD95, #C72785, #6F39C5, #2F46F3 400%)", position: 'fixed', zIndex: -1, marginBottom: "100px"}}>
-                    <img src="../../assets/image4.png" alt="Avatar" style={{width: "390px", marginTop: "55px", borderRadius: "25px"}}></img>
-                </div>
-            </div>
+            <Headers />
             <div className="container-fluid">
             <IconButton className="bg-black p-1 align-self-start" aria-label="back" onClick={() => navigate("/home")} style={{marginTop: "75px"}}>
                 <ArrowBack htmlColor="#FFFFFF" />
