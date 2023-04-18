@@ -32,7 +32,7 @@ const Home = (props) => {
                 </div>
                 <Link to="/publish" style={{textDecoration: "none"}}>
                     <Cards>
-                    <div className="card" style={{borderRadius: "10px"}}>
+                    <div className="card" style={{borderRadius: "10px", boxShadow: "0px 0px 5px 5px #D3D3D3"}}>
                         <img src="../../assets/image1.png" alt="Avatar"></img>
                         <div className="container">
                             <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> Make new post </p>
@@ -42,7 +42,7 @@ const Home = (props) => {
                 </Link>
                 <Link to="/viewpost" style={{textDecoration: "none"}}>
                     <Cards>
-                    <div className="card" style={{borderRadius: "10px"}}>
+                    <div className="card" style={{borderRadius: "10px", boxShadow: "0px 0px 5px 5px #D3D3D3"}}>
                         <img src="../../assets/image2.png" alt="Avatar"></img>
                         <div className="container">
                             <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> View all posts </p>
@@ -52,7 +52,7 @@ const Home = (props) => {
                 </Link>
                 <Link to="/viewpost" style={{textDecoration: "none"}}>
                     <Cards>
-                    <div className="card" style={{borderRadius: "10px", marginBottom: "25px"}}>
+                    <div className="card" style={{borderRadius: "10px", marginBottom: "25px", boxShadow: "0px 0px 5px 5px #D3D3D3"}}>
                         <img src="../../assets/image3.png" alt="Avatar"></img>
                         <div className="container">
                             <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> Tips for posting </p>
