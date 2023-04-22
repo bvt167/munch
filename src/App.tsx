@@ -31,7 +31,6 @@ function App() {
         <Route path="/signin" element={ <SignIn /> } />
         <Route path="/home" element={ <Home /> } />
         <Route path="/viewpost" element={ <ViewPost /> } />
-        <Route path="/home" element={ <Home /> } />
         <Route path="/confirm" element={ <ConfirmPost />} />
       </Routes>
     </Router>

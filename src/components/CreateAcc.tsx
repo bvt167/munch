@@ -19,7 +19,6 @@ const CircledContainer = styled.div`
 `
 
 
-
 const CreateAcc = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -45,7 +44,7 @@ const CreateAcc = (props) => {
 
       const resp = await registerAccount(params);
       if (SUCCESS === resp.status) {
-        navigate(HOME_ROUTE);
+        navigate("/home");
       } else {
         setStatusModalTItle("Error Registering");
         if (ACCOUNT_ALREADY_REGISTERED_STATUS === resp.status) {
@@ -75,7 +74,7 @@ const CreateAcc = (props) => {
                 ""
               }
               <form onSubmit={handleOnSubmit}>
-                  <div className="form-row align-items-center p-2">
+                  <div className="form-row align-items-center p-2 mb-2">
                       <div className="form-group col-md-4">
                           <label htmlFor = "inputEmail">Email address *</label>
                           <input type="email" className="form-control " onChange={(e) => setEmail(e.target.value)} value={email} id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email"/>
@@ -106,7 +105,11 @@ const CreateAcc = (props) => {
                       </div>
                       <div className="form-group col-md-4">
                           <label htmlFor = "inputJobTitle">Job Title</label>
-                          <input type="jobtitle" className="form-control "  onChange={(e) => setJobTitle(e.target.value)} value={jobTitle} id="inputJobTitle" aria-describedby="jobtitleHelp" placeholder="What is your Job Title"/>
+                          <select className="form-control" id="inputJobTitle" onChange={(e) => setJobTitle(e.target.value)}>
+                            <option>worker</option>
+                            <option>manager</option>
+                            <option>owner</option>
+                          </select>
                       </div>
                   </div>
                   <ThemeProvider theme={MAIN_THEME}>
