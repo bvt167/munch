@@ -19,24 +19,62 @@ const Body = styled.div`
     align-items: center;
 `
 
+const ProfileIMG = styled.div`
+    float: left;
+    width: calc(33.33% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+
+    @media screen and (max-width: 40rem) {
+        float: none;
+        width: auto;
+    }
+
+    @supports (display: grid) {
+        grid-row: 1 / -1;
+        width: auto;
+        margin: 0;
+    }
+
+    @media (max-width: 40rem) {
+        grid-row: 1 / 2;
+    }
+`
+
+const ProfileSetting = styled.div`
+    float: left;
+    width: calc(66.66% -2rem);
+    margin-top: 1.1rem;
+
+    @media screen and (max-width: 40rem) {
+        float: none;
+        width: auto;
+        flex-basis: calc(100% - 10.7rem);
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    @supports (display: grid) {
+        width: auto;
+        margin: 0;
+    }
+
+    @media (max-width: 40rem) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 1rem;
+        margin: 0;
+    }
+`
+
 const Profile = styled.div`
     max-width: 900px;
     display: grid;
     grid-template-columns: 1fr 3fr;
 
-    .profile-img {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-        margin-left: 2rem;
-        width: 150px;
-        height: 150px;
-
-        @media (max-width: 768px) {
-            width: 150px;
-            height: 150px;
-        }
-    }
 
     .profile-details {
         display: flex;
@@ -67,16 +105,6 @@ const Profile = styled.div`
             align-items: center;
         }
     }
-`
-
-const Button = styled.div`
-    display: inline-block;
-    font: inherit;
-    background: none;
-    border: none;
-    color: inherit;
-    padding: 0;
-    cursor: pointer;
 `
 
 const Container = styled.div`
@@ -157,37 +185,33 @@ const ViewPost = (props) => {
     return (
 
         <Body>
+            <div className="Header">
+            <Container>
             <Profile>
 
-                <div className="profile-img">
-                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", width: "100%", height: "100%" }}></img>
-                </div>
+                <ProfileIMG>
+                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "100px"}}></img>
+                </ProfileIMG>
 
-                <div className="profile-details">
-                    <div className="profile-user-settings">
+                    <ProfileSetting>
 
-                        <h1 className="profile-user-name" style={{ display: "inline-block", fontSize: "27px", fontWeight: "900", letterSpacing: 1.1 }}>MunchRestaurants</h1>
+                        <h1 className="profile-user-name">MunchRestaurants</h1>
 
-                        <button className="btn profile-edit-btn" style={{ display: "inline-block", font: "inherit", background: "none", color: "inherit", cursor: "pointer", fontSize: "10px", lineHeight: "1.8", border: "0.1rem solid #dbdbdb", borderRadius: "0.3rem", padding: "0 1rem", marginLeft: "5px" }}>Edit Profile</button>
-                    </div>
+                        <button className="btn profile-edit-btn">Edit Profile</button>
+                    </ProfileSetting>
 
                     <div className="profile-stats">
 
                         <ul>
-                            <li style={{ display: "inline-block", fontSize: "18px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>164</span> posts</li>
-                            <li style={{ display: "inline-block", fontSize: "18px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>188</span> followers</li>
-                            <li style={{ display: "inline-block", fontSize: "18px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>206</span> following</li>
+                            <li style={{ display: "inline-block", fontSize: "12px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>164</span> posts</li>
+                            <li style={{ display: "inline-block", fontSize: "12px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>188</span> followers</li>
+                            <li style={{ display: "inline-block", fontSize: "12px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>206</span> following</li>
                         </ul>
 
                     </div>
-
-                    <div className="profile-bio">
-
-                        <p style={{ margin: "0 20px" }}><span className="profile-real-name" style={{ fontWeight: 700 }}>Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
-
-                    </div>
-                </div>
             </Profile>
+            </Container>
+            </div>
 
             <Container>
                 <Gallery>
