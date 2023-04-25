@@ -26,6 +26,7 @@ const ProfileIMG = styled.div`
     justify-content: center;
     align-items: center;
     margin-right: 3rem;
+    margin-left: 100px
 
     @media screen and (max-width: 40rem) {
         float: none;
@@ -70,41 +71,141 @@ const ProfileSetting = styled.div`
     }
 `
 
+const ProfileUserName = styled.div`
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+
+    @media screen and (max-width: 40rem) {
+        font-size: 2.2rem;
+    }
+`
+
+const ProfileStats = styled.div`
+    float: left;
+    width: calc(66.666% - 2rem);
+    margin-top: 2.3rem;
+
+    @media screen and (max-width: 40rem) {
+        float: none;
+        width: auto;
+        flex-basis: 100%;
+        order: 1;
+        margin-top: 1.5rem;
+    }
+
+    @supports (display: grid) {
+        width: auto;
+        margin: 0;
+    }
+
+    @media (max-width: 40rem) {
+        grid-column: 1 / -1;
+        margin: 0;
+    }
+`
+
+const ProfileStatList = styled.li`
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+    list-style: none;
+
+    .li:last-of-type {
+        margin-right: 0;
+    }
+
+    @media screen and (max-width: 40rem) {
+        font-size: 1.4rem;
+        flex: 1;
+        margin: 0;
+    }
+`
+
+const ProfileStatUL = styled.li`
+    @media screen and (max-width: 40rem) {
+        display: flex;
+        text-align: center;
+        padding: 1.2rem 0;
+        border-top: 0.1rem solid #dadada;
+        border-bottom: 0.1rem solid #dadada;
+    }
+`
+
+const Button = styled.div`
+    display: inline-block;
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+    font-weight: 600; 
+
+    @media screen and (max-width: 40rem) {
+        order: 1;
+        padding: 0;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: 0;
+        flex-basis: 100%;
+    }
+
+    @media (max-width: 40rem) {
+        grid-column: 1 / -1;
+        margin: 0;
+    }
+`
+
 const Profile = styled.div`
     max-width: 900px;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    padding: 5rem 0;
 
+    .profile::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
 
-    .profile-details {
-        display: flex;
-        flex-direction: column;
-        gap: 5px; 
-        margin: 2rem 1rem 4rem 1rem;
-
-        @media (max-width: 768px) {
-            margin: 2px 0 4rem 0;
-        }
-        .btn {
-            display: inline-block;
-            font: inherit;
-            background: none;
-            border: none;
-            color: inherit;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .btn:focus {
-            outline: 0.5rem auto #4d90fe;
-        }
-
-        .profile-user-settings {
-            padding: 20px;
+    @media screen and (max-width: 40rem) {
+        .profile {
             display: flex;
+            flex-wrap: wrap;
+            padding: 4rem 0;
+        }
+        .profile::after {
+            display: none;
+        }
+    }
+
+    @supports (display: grid) {
+        .profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: repeat(3, auto);
+            grid-column-gap: 3rem;
             align-items: center;
         }
     }
+
+    @media (max-width: 40rem) {
+        .profile {
+            grid-template-columns: auto 1fr;
+            grid-row-gap: 1.5rem;
+        }
+
+    }
+
 `
 
 const Container = styled.div`
@@ -195,20 +296,20 @@ const ViewPost = (props) => {
 
                     <ProfileSetting>
 
-                        <h1 className="profile-user-name">MunchRestaurants</h1>
+                        <ProfileUserName>MunchRestaurants</ProfileUserName>
 
-                        <button className="btn profile-edit-btn">Edit Profile</button>
+                        <Button>Edit Profile</Button>
                     </ProfileSetting>
 
-                    <div className="profile-stats">
+                    <ProfileStats>
 
-                        <ul>
-                            <li style={{ display: "inline-block", fontSize: "12px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>164</span> posts</li>
-                            <li style={{ display: "inline-block", fontSize: "12px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>188</span> followers</li>
-                            <li style={{ display: "inline-block", fontSize: "12px", fontWeight: 500, lineHeight: "1", marginRight: "1rem", cursor: "pointer" }}><span className="profile-stat-count" style={{ fontWeight: 700 }}>206</span> following</li>
-                        </ul>
+                        <ProfileStatUL>
+                            <ProfileStatList><span className="profile-stat-count" style={{ fontWeight: 700 }}>164</span> posts</ProfileStatList>
+                            <ProfileStatList><span className="profile-stat-count" style={{ fontWeight: 700 }}>188</span> followers</ProfileStatList>
+                            <ProfileStatList><span className="profile-stat-count" style={{ fontWeight: 700 }}>206</span> following</ProfileStatList>
+                        </ProfileStatUL>
 
-                    </div>
+                    </ProfileStats>
             </Profile>
             </Container>
             </div>
