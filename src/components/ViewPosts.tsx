@@ -25,22 +25,13 @@ const ProfileIMG = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem;
     margin-left: 100px
 
-    @media screen and (max-width: 40rem) {
-        float: none;
-        width: auto;
-    }
-
-    @supports (display: grid) {
+    @media (max-width: 844px) {
         grid-row: 1 / -1;
-        width: auto;
-        margin: 0;
-    }
-
-    @media (max-width: 40rem) {
-        grid-row: 1 / 2;
+        float: none;
+        width: 100%;
+        margin-left: 
     }
 `
 
@@ -49,25 +40,11 @@ const ProfileSetting = styled.div`
     width: calc(66.66% -2rem);
     margin-top: 1.1rem;
 
-    @media screen and (max-width: 40rem) {
-        float: none;
-        width: auto;
-        flex-basis: calc(100% - 10.7rem);
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
 
-    @supports (display: grid) {
-        width: auto;
-        margin: 0;
-    }
-
-    @media (max-width: 40rem) {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 1rem;
-        margin: 0;
+    @media (max-width: 844px) {
+        display: inline-block;
+        margin: 10px;
+        width: 100%;
     }
 `
 
@@ -76,14 +53,14 @@ const ProfileUserName = styled.div`
     font-size: 3.2rem;
     font-weight: 300;
 
-    @media screen and (max-width: 40rem) {
-        font-size: 2.2rem;
+    @media screen and (max-width: 844px) {
+        font-size: 10px;
+        margin-right: 15px;
     }
 `
 
 const ProfileStats = styled.div`
     float: left;
-    width: calc(66.666% - 2rem);
     margin-top: 2.3rem;
 
     @media screen and (max-width: 40rem) {
@@ -94,10 +71,6 @@ const ProfileStats = styled.div`
         margin-top: 1.5rem;
     }
 
-    @supports (display: grid) {
-        width: auto;
-        margin: 0;
-    }
 
     @media (max-width: 40rem) {
         grid-column: 1 / -1;
@@ -117,18 +90,18 @@ const ProfileStatList = styled.li`
         margin-right: 0;
     }
 
-    @media screen and (max-width: 40rem) {
-        font-size: 1.4rem;
+    @media screen and (max-width: 844px) {
+        font-size: .75rem;
         flex: 1;
         margin: 0;
     }
 `
 
 const ProfileStatUL = styled.li`
-    @media screen and (max-width: 40rem) {
+    @media screen and (max-width: 844px) {
         display: flex;
         text-align: center;
-        padding: 1.2rem 0;
+        padding: .5rem 0;
         border-top: 0.1rem solid #dadada;
         border-bottom: 0.1rem solid #dadada;
     }
@@ -142,13 +115,14 @@ const Button = styled.div`
     color: inherit;
     padding: 0;
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: .75rem;
     line-height: 1.8;
     border: 0.1rem solid #dbdbdb;
     border-radius: 0.3rem;
     padding: 0 2.4rem;
     margin-left: 2rem;
     font-weight: 600; 
+    width: 30%;
 
     @media screen and (max-width: 40rem) {
         order: 1;
@@ -291,7 +265,7 @@ const ViewPost = (props) => {
             <Profile>
 
                 <ProfileIMG>
-                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "100px"}}></img>
+                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "75px"}}></img>
                 </ProfileIMG>
 
                     <ProfileSetting>
