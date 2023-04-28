@@ -21,7 +21,6 @@ const Body = styled.div`
 
 const ProfileIMG = styled.div`
     float: left;
-    width: calc(33.333% - 1rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +29,7 @@ const ProfileIMG = styled.div`
     @media (max-width: 844px) {
         grid-row: 1 / -1;
         float: none;
-        width: 100%;
+
     }
 `
 
@@ -41,7 +40,7 @@ const ProfileSetting = styled.div`
 
     @media (max-width: 844px) {
         display: inline-block;
-        margin: 15px;
+        margin: 0px;
         width: 100%;
     }
 `
@@ -52,13 +51,14 @@ const ProfileUserName = styled.div`
     font-weight: 300;
 
     @media screen and (max-width: 844px) {
-        font-size: 18px;
-        margin-right: 15px;
+        font-size: 24px;
+        margin-right: ;
     }
 `
 
 const ProfileStats = styled.div`
     float: left;
+    width: calc(66.666% - 2rem);
     margin-top: 2.3rem;
 
     @media screen and (max-width: 40rem) {
@@ -66,7 +66,8 @@ const ProfileStats = styled.div`
         width: auto;
         flex-basis: 100%;
         order: 1;
-        margin-top: 1.5rem;
+        margin-top: 0;
+        margin-left: -1;
     }
 
 
@@ -78,21 +79,18 @@ const ProfileStats = styled.div`
 
 const ProfileStatList = styled.li`
     display: inline-block;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-right: 4rem;
+    line-height: 2.5;
+    margin-right: 3rem;
+    margin-left: 1rem;
     cursor: pointer;
     list-style: none;
+    font-size: 14px;
+    flex: 2;
 
     .li:last-of-type {
         margin-right: 0;
     }
 
-    @media screen and (max-width: 844px) {
-        font-size: 12px;
-        flex: 1;
-        margin: 0;
-    }
 `
 
 const ProfileStatUL = styled.li`
@@ -106,30 +104,14 @@ const ProfileStatUL = styled.li`
 `
 
 const Button = styled.div`
-    display: inline-block;
-    font: inherit;
-    background: none;
-    border: none;
-    color: inherit;
-    padding: 0;
-    cursor: pointer;
-    font-size: .5rem;
-    line-height: 1.8;
+    font-size: 12px;
+    line-height: 1.25rem;
     border: 0.1rem solid #dbdbdb;
     border-radius: 0.3rem;
     padding: 0 1rem;
     margin-left: 2rem;
-    font-weight: 600; 
-    width: 30%;
-
-    @media screen and (max-width: 844px) {
-        order: 1;
-        padding: 0;
-        text-align: center;
-        margin-top: 1rem;
-        margin-left: 0;
-        flex-basis: 100%;
-    }
+    font-weight: 600;
+    text-align: center;
 
     @media (max-width: 40rem) {
         grid-column: 1 / -1;
@@ -148,26 +130,13 @@ const Profile = styled.div`
         display: block;
         clear: both;
     }
-
-    @media screen and (max-width: 844px) {
-        .profile {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 4rem 0;
-        }
-        .profile::after {
-            display: none;
-        }
-    }
-
-
-
-    @media (max-width: 844px) {
-        .profile {
-            grid-template-columns: auto 1fr;
-            grid-row-gap: 1.5rem;
-        }
-
+    @supports (display: grid) {
+    .profile {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 3rem;
+        align-items: center;
     }
 
 `
@@ -254,7 +223,7 @@ const ViewPost = (props) => {
                 <Profile>
 
                     <ProfileIMG>
-                        <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block"}}></img>
+                        <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "75px"}}></img>
                     </ProfileIMG>
 
                     <ProfileSetting>
@@ -262,7 +231,6 @@ const ViewPost = (props) => {
                         <ProfileUserName>MunchRestaurants</ProfileUserName>
 
                         <Button>Edit Profile</Button>
-                        <button className="btn profile-settings-btn" aria-label="profile settings" style={{fontSize: "10px", marginLeft: "1rem"}}><i className="fas fa-cog" aria-hidden="true"></i></button>
                     </ProfileSetting>
 
                     <ProfileStats>
