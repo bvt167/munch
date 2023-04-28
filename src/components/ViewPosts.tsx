@@ -21,29 +21,27 @@ const Body = styled.div`
 
 const ProfileIMG = styled.div`
     float: left;
-    width: calc(33.33% - 1rem);
+    width: calc(33.333% - 1rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px
+    margin-right: 3rem;
 
     @media (max-width: 844px) {
         grid-row: 1 / -1;
         float: none;
         width: 100%;
-        margin-left: 
     }
 `
 
 const ProfileSetting = styled.div`
     float: left;
-    width: calc(66.66% -2rem);
     margin-top: 1.1rem;
 
 
     @media (max-width: 844px) {
         display: inline-block;
-        margin: 10px;
+        margin: 15px;
         width: 100%;
     }
 `
@@ -54,7 +52,7 @@ const ProfileUserName = styled.div`
     font-weight: 300;
 
     @media screen and (max-width: 844px) {
-        font-size: 10px;
+        font-size: 18px;
         margin-right: 15px;
     }
 `
@@ -80,7 +78,7 @@ const ProfileStats = styled.div`
 
 const ProfileStatList = styled.li`
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin-right: 4rem;
     cursor: pointer;
@@ -91,7 +89,7 @@ const ProfileStatList = styled.li`
     }
 
     @media screen and (max-width: 844px) {
-        font-size: .75rem;
+        font-size: 12px;
         flex: 1;
         margin: 0;
     }
@@ -101,7 +99,7 @@ const ProfileStatUL = styled.li`
     @media screen and (max-width: 844px) {
         display: flex;
         text-align: center;
-        padding: .5rem 0;
+        padding: .25rem;
         border-top: 0.1rem solid #dadada;
         border-bottom: 0.1rem solid #dadada;
     }
@@ -115,16 +113,16 @@ const Button = styled.div`
     color: inherit;
     padding: 0;
     cursor: pointer;
-    font-size: .75rem;
+    font-size: .5rem;
     line-height: 1.8;
     border: 0.1rem solid #dbdbdb;
     border-radius: 0.3rem;
-    padding: 0 2.4rem;
+    padding: 0 1rem;
     margin-left: 2rem;
     font-weight: 600; 
     width: 30%;
 
-    @media screen and (max-width: 40rem) {
+    @media screen and (max-width: 844px) {
         order: 1;
         padding: 0;
         text-align: center;
@@ -151,7 +149,7 @@ const Profile = styled.div`
         clear: both;
     }
 
-    @media screen and (max-width: 40rem) {
+    @media screen and (max-width: 844px) {
         .profile {
             display: flex;
             flex-wrap: wrap;
@@ -162,17 +160,9 @@ const Profile = styled.div`
         }
     }
 
-    @supports (display: grid) {
-        .profile {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-template-rows: repeat(3, auto);
-            grid-column-gap: 3rem;
-            align-items: center;
-        }
-    }
 
-    @media (max-width: 40rem) {
+
+    @media (max-width: 844px) {
         .profile {
             grid-template-columns: auto 1fr;
             grid-row-gap: 1.5rem;
@@ -260,19 +250,19 @@ const ViewPost = (props) => {
     return (
 
         <Body>
-            <div className="Header">
             <Container>
-            <Profile>
+                <Profile>
 
-                <ProfileIMG>
-                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "75px"}}></img>
-                </ProfileIMG>
+                    <ProfileIMG>
+                        <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block"}}></img>
+                    </ProfileIMG>
 
                     <ProfileSetting>
 
                         <ProfileUserName>MunchRestaurants</ProfileUserName>
 
                         <Button>Edit Profile</Button>
+                        <button className="btn profile-settings-btn" aria-label="profile settings" style={{fontSize: "10px", marginLeft: "1rem"}}><i className="fas fa-cog" aria-hidden="true"></i></button>
                     </ProfileSetting>
 
                     <ProfileStats>
@@ -284,9 +274,9 @@ const ViewPost = (props) => {
                         </ProfileStatUL>
 
                     </ProfileStats>
-            </Profile>
+
+                </Profile>
             </Container>
-            </div>
 
             <Container>
                 <Gallery>
