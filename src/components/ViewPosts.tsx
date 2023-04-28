@@ -5,15 +5,17 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import CollectionsIcon from '@mui/icons-material/Collections';
+import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
+import { IconButton } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
 
 
 const Body = styled.div`
     font-family: "Open Sans", Arial, sans-serif;
-    min-height: 100vh;
     width: 100%;
     background-color: #fafafa;
     color: #262626;
-    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +81,6 @@ const ProfileStats = styled.div`
 
 const ProfileStatList = styled.li`
     display: inline-block;
-    line-height: 2.5;
     margin-right: 3rem;
     margin-left: 1rem;
     cursor: pointer;
@@ -123,7 +124,8 @@ const Profile = styled.div`
     max-width: 900px;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 5rem 0;
+    padding: 3rem 0;
+    padding-top: 0;
 
     .profile::after {
         content: "";
@@ -215,9 +217,13 @@ const GalleryItemType = styled.div`
 
 
 const ViewPost = (props) => {
+  const navigate = useNavigate();
 
     return (
-
+      <div>
+        <IconButton className="bg-black m-2 p-1 align-self-start" aria-label="back" onClick={() => navigate("/home")}>
+            <ArrowBack htmlColor="#FFFFFF" />
+        </IconButton>
         <Body>
             <Container>
                 <Profile>
@@ -233,7 +239,7 @@ const ViewPost = (props) => {
                         <Button>Edit Profile</Button>
                     </ProfileSetting>
 
-                    <ProfileStats>
+                    <ProfileStats className="mt-4">
 
                         <ProfileStatUL>
                             <ProfileStatList><span className="profile-stat-count" style={{ fontWeight: 700 }}>164</span> posts</ProfileStatList>
@@ -246,7 +252,7 @@ const ViewPost = (props) => {
                 </Profile>
             </Container>
 
-            <Container>
+            <Container className="mb-5">
                 <Gallery>
 
                     <GalleryItem tabIndex="0">
@@ -476,6 +482,28 @@ const ViewPost = (props) => {
             </Container>
 
         </Body>
+        <Navbar />
+      </div>
+
+      // <div>
+      //   <Headers />
+      //   <Body>
+      //     <Container>
+      //       <Profile>
+      //          <ProfileIMG>
+      //            <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "75px"}}></img>
+      //         </ProfileIMG>
+      //       </Profile>
+      //     </Container>
+
+      //     <Container>
+      //       <Gallery>
+
+      //       </Gallery>
+      //     </Container>
+      //   </Body>
+      //   <Navbar />
+      // </div>
     );
 };
 
