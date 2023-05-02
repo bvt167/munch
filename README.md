@@ -54,6 +54,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Hosted web app: https://victorious-dune-0e5eed11e.2.azurestaticapps.net/
 * Hosted backend: https://munch.azurewebsites.net/
 * Backend repository: https://github.com/bvt167/munch-back-end
+* Final presentation: https://docs.google.com/presentation/d/1-EqW145BVskgbnMoF0iMW0xGzqYMrucp8-4sMCL25og/edit#slide=id.p
 
 ## Available Scripts
 
