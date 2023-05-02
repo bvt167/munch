@@ -43,7 +43,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * Originally hosted on Azure but will be taken down by end of Spring 2023 quarter per handoff procedure
   * Recommend re-hosting on Azure
     * Process is fairly simple
-      - Azure provides a tutorial on hosting with a Github repo
+      - Azure provides a [tutorial](https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=react) on hosting with a Github repo
     * Free with UW account
 * Add new features
   * Use React Router to add new pages/components
