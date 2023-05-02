@@ -1,8 +1,27 @@
-# Getting Started with Create React App
+# Munch React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Contact us at: Jasonj1@uw.edu ot bvt@uw.edu
+## Contact us at: Jasonj1@uw.edu or bvt@uw.edu
+
+## Continuing the Project
+
+### Background
+
+* Project uses React + Typescript
+* Project was developed with only mobile view in mind
+ * Mainly due to time constraints since we only had time for a mobile view prototype
+ * View is not entirely responsive and does not display properly for desktop View
+ * To view web app properly:
+   * Use Google Chrome
+   * Inspect the window to open dev tools
+   * Change view to mobile
+   * Choose iPhone 12 Pro as viewing device
+* Due to varying levels of experience, there is a mixture of styling techniques/frameworks involved
+ * Bootstrap classes
+ * Material UI
+ * Inline styling
+*
 
 ## Links
 
