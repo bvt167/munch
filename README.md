@@ -21,7 +21,33 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  * Bootstrap classes
  * Material UI
  * Inline styling
-*
+* Uses React Router to organize pages
+
+### Structure
+
+* Multi-page structure
+ * Uses React Router to organize and navigate between pages/components
+* Multiple directories to organize types of files
+  * Components contains all the React components
+  * Constant contains files to house constants such as URL's and strings
+  * Theme contains themes for Material UI
+  * Types contains types for Typescript
+  * Util contains utility classes/functions like ApiUtil that handles the logic of calling backend endpoints
+
+### Next Steps
+
+* Refactor the code to have consistent styling
+  * Replace inline styles with css classes or bootstrap classes
+  * Incorporate Material UI as much as possible
+* Re-host the project
+  * Originally hosted on Azure but will be taken down by end of Spring 2023 quarter per handoff procedure
+  * Recommend re-hosting on Azure
+    * Process is fairly simple
+      - Azure provides a tutorial on hosting with a Github repo
+    * Free with UW account
+* Add new features
+  * Use React Router to add new pages/components
+
 
 ## Links
 
