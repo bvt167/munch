@@ -28,7 +28,7 @@ const Home = (props) => {
             <Headers />
             <div className="container-fluid">
                 <div className="text-center">
-                    <img src="../../assets/munchLogo.png" alt="logo" width={"300px"} style={{marginTop: "100px", marginBottom: "10px"}} ></img>
+                    <img src="../../assets/munchLogo.png" alt="logo" width={"300px"} style={{marginTop: "10px", marginBottom: "10px"}} ></img>
                 </div>
                 <Link to="/publish" style={{textDecoration: "none"}}>
                     <Cards>
@@ -50,7 +50,7 @@ const Home = (props) => {
                     </div>
                     </Cards>
                 </Link>
-                <Link to="/viewpost" style={{textDecoration: "none"}}>
+                <Link to="/tips" style={{textDecoration: "none"}}>
                     <Cards>
                     <div className="card" style={{borderRadius: "10px", marginBottom: "25px", boxShadow: "0px 0px 5px 5px #D3D3D3"}}>
                         <img src="../../assets/image3.png" alt="Avatar"></img>

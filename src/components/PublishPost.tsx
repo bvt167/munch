@@ -53,11 +53,11 @@ const PublishPost = (props) => {
         <div>
             <Headers />
             <div className="container-fluid">
-            <IconButton className="bg-black p-1 align-self-start" aria-label="back" onClick={() => navigate("/home")} style={{marginTop: "75px"}}>
+            <IconButton className="bg-black p-1 align-self-start" aria-label="back" onClick={() => navigate("/home")} style={{marginTop: "0"}}>
                 <ArrowBack htmlColor="#FFFFFF" />
             </IconButton>
                 <div className="text-center">
-                        <h3 style={{marginTop: "50px"}}> Add images from </h3>
+                        <h3 style={{marginTop: "1px"}}> Add images from </h3>
                         <h3> your photo library </h3>
                 </div>
             </div>

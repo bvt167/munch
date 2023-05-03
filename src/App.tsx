@@ -9,6 +9,7 @@ import SignIn from 'components/SignIn';
 import ViewPost from 'components/ViewPosts';
 import ConfirmPost from 'components/ConfirmPost';
 import Landing from 'components/LandingPage';
+import Tips from 'components/Tips';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/viewpost" element={ <ViewPost /> } />
         <Route path="/confirm" element={ <ConfirmPost />} />
         <Route path="/landing" element={ <Landing />} />
+        <Route path="/tips" element={ <Tips />} />
       </Routes>
     </Router>
   )
