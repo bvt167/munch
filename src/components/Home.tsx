@@ -52,7 +52,7 @@ const Home = (props) => {
                 </Link>
                 <Link to="/tips" style={{textDecoration: "none"}}>
                     <Cards>
-                    <div className="card" style={{borderRadius: "10px", marginBottom: "25px", boxShadow: "0px 0px 5px 5px #D3D3D3"}}>
+                    <div className="card" style={{borderRadius: "10px", marginBottom: "5px", boxShadow: "0px 0px 5px 5px #D3D3D3"}}>
                         <img src="../../assets/image3.png" alt="Avatar"></img>
                         <div className="container">
                             <p className="text-center" style={{fontWeight: "bold", fontSize: "20px", marginTop: "5px", marginBottom: "5px"}}> Tips for posting </p>
@@ -60,6 +60,13 @@ const Home = (props) => {
                     </div>
                     </Cards>
                 </Link>
+            </div>
+            <div className="container flex-column align-items-center ">
+            <div style={{textAlign: "center", marginTop: "175px"}}>
+                <p>
+                    Munch Restaurants founded in 2023.
+                </p>
+            </div>
             </div>
             <Navbar />
         </>

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import VideocamIcon from '@mui/icons-material/Videocam';
@@ -221,6 +220,11 @@ const ViewPost = (props) => {
 
     return (
       <div>
+        <div className="container p-0"> 
+            <div className="p-0" style={{ width: "390px", height: "95px", background: "linear-gradient(210deg, #FFDD95, #C72785, #6F39C5, #2F46F3 400%)", zIndex: -1}}>
+                <img src="../../assets/image4.png" alt="Avatar" style={{width: "390px", marginTop: "55px", borderRadius: "25px"}}></img>
+            </div>
+        </div>
         <IconButton className="bg-black m-2 p-1 align-self-start" aria-label="back" onClick={() => navigate("/home")}>
             <ArrowBack htmlColor="#FFFFFF" />
         </IconButton>
