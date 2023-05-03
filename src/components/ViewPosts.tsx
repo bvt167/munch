@@ -257,7 +257,7 @@ const ViewPost = (props) => {
 
                     <GalleryItem tabIndex="0">
 
-                        <img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop" className="gallery-image" alt="" />
+                        <img src="https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" className="gallery-image" alt="" />
 
                         <GalleryItemType>
 
@@ -278,7 +278,7 @@ const ViewPost = (props) => {
 
                     <GalleryItem tabIndex="0">
 
-                        <img src="https://images.unsplash.com/photo-1497445462247-4330a224fdb1?w=500&h=500&fit=crop" className="gallery-image" alt="" />
+                        <img src="https://images.unsplash.com/photo-1535395155851-2088a2a94701?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" className="gallery-image" alt="" />
 
                         <GalleryItemInfo>
 
@@ -293,7 +293,7 @@ const ViewPost = (props) => {
 
                     <GalleryItem tabIndex="0">
 
-                        <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop" className="gallery-image" alt="" />
+                        <img src="https://images.unsplash.com/photo-1627626308695-edc100c56944?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" className="gallery-image" alt="" />
 
                         <GalleryItemType>
 
@@ -312,171 +312,6 @@ const ViewPost = (props) => {
 
                     </GalleryItem>
 
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemType>
-
-                            <span className="visually-hidden">Video</span><i className="fas fa-video" aria-hidden="true"></i>
-
-                        </GalleryItemType>
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 38</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 0</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1498471731312-b6d2b8280c61?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemType>
-
-                            <span className="visually-hidden">Gallery</span><i className="fas fa-clone" aria-hidden="true"></i>
-
-                        </GalleryItemType>
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 47</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 1</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 94</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 3</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemType>
-
-                            <span className="visually-hidden">Gallery</span><CollectionsIcon sx={{ fontSize: 40 }} />
-
-                        </GalleryItemType>
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 52</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 4</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1515814472071-4d632dbc5d4a?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 66</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 2</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1511407397940-d57f68e81203?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemType>
-
-                            <span className="visually-hidden">Gallery</span><CollectionsIcon sx={{ fontSize: 40 }} />
-
-                        </GalleryItemType>
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 45</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 0</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 34</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 1</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 41</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 0</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
-                    <GalleryItem tabIndex="0">
-
-                        <img src="https://images.unsplash.com/photo-1423012373122-fff0a5d28cc9?w=500&h=500&fit=crop" className="gallery-image" alt="" />
-
-                        <GalleryItemType>
-
-                            <span className="visually-hidden">Video</span><VideocamIcon sx={{ fontSize: 40 }} />
-
-                        </GalleryItemType>
-
-                        <GalleryItemInfo>
-
-                            <GalleryItemInfoList>
-                                <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><FavoriteIcon /> 30</li>
-                                <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><ChatBubbleIcon /> 2</li>
-                            </GalleryItemInfoList>
-
-                        </GalleryItemInfo>
-
-                    </GalleryItem>
-
                 </Gallery>
 
             </Container>
@@ -484,26 +319,6 @@ const ViewPost = (props) => {
         </Body>
         <Navbar />
       </div>
-
-      // <div>
-      //   <Headers />
-      //   <Body>
-      //     <Container>
-      //       <Profile>
-      //          <ProfileIMG>
-      //            <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" style={{ borderRadius: "50%", display: "block", width: "75px"}}></img>
-      //         </ProfileIMG>
-      //       </Profile>
-      //     </Container>
-
-      //     <Container>
-      //       <Gallery>
-
-      //       </Gallery>
-      //     </Container>
-      //   </Body>
-      //   <Navbar />
-      // </div>
     );
 };
 
