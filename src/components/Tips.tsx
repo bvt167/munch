@@ -2,17 +2,25 @@ import React from "react";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Headers from "./Header";
 import Navbar from "./Navbar";
+import { IconButton } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+
+
 
 
 
 
 const Tips = () => {
+    const navigate = useNavigate();
 
 
     return (
         <>
         <Headers />
-
+        <IconButton className="bg-black p-1 align-self-start" aria-label="back" onClick={() => navigate("/home")} style={{marginTop: "0", marginLeft: "10px"}}>
+                <ArrowBack htmlColor="#FFFFFF" />
+        </IconButton>
 
         <div className="container flex-column align-items-center ">
             <div style={{textAlign: "center", marginTop: "15px"}}>

@@ -57,7 +57,7 @@ const PublishPost = (props) => {
                 <ArrowBack htmlColor="#FFFFFF" />
             </IconButton>
                 <div className="text-center">
-                        <h3 style={{marginTop: "1px"}}> Add images from </h3>
+                        <h3 style={{marginTop: "10px"}}> Add images from </h3>
                         <h3> your photo library </h3>
                 </div>
             </div>
